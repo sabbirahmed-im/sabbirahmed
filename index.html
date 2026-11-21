@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sabbir Ahmed (sabbirahmed) | Founder of Orviton</title>
-<meta name="description" content="Sabbir Ahmed is the founder of Orviton, a startup building useful products from Bangladesh. Explore his vision, interests, GitHub, LinkedIn and X profiles.">
+<title>Sabbir Ahmed | Founder of Orviton</title>
+<meta name="description" content="Sabbir Ahmed is the founder of Orviton, creator of LeadLeap. Open to SaaS sales partnerships.">
 <meta name="author" content="Sabbir Ahmed">
 <link rel="canonical" href="https://sabbirahmed.im/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Sabbir Ahmed | Founder of Orviton">
-<meta property="og:description" content="Founder of Orviton. Vision, interests and links.">
+<meta property="og:description" content="Founder of Orviton, creator of LeadLeap. Looking for SaaS sales partners.">
 <meta property="og:url" content="https://sabbirahmed.im/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sabbirahmed_im">
@@ -23,247 +23,246 @@
   "name": "Sabbir Ahmed",
   "alternateName": ["sabbirahmed", "sabbirahmed_im"],
   "jobTitle": "Founder",
+  "description": "Founder of Orviton and creator of LeadLeap.",
   "url": "https://sabbirahmed.im/",
   "worksFor": { "@type": "Organization", "name": "Orviton", "url": "https://www.orviton.com/" },
   "sameAs": [
     "https://github.com/sabbirahmed-im",
     "https://www.linkedin.com/in/sabbirahmed-im/",
     "https://x.com/sabbirahmed_im",
+    "https://www.reddit.com/user/sabbirahmed-im/",
     "https://www.orviton.com/"
   ]
 }
 </script>
 <style>
 :root{
-  --blush:#F3B6B6; --sand:#E29B6A; --rust:#CE4F2F; --wine:#8E1523;
-  --paper:#fff6f2;
-  --bg:var(--blush); --ink:var(--wine);
+  --blush:#F3B6B6;--sand:#E29B6A;--rust:#CE4F2F;--wine:#8E1523;
+  --paper:#fff6f2;--deep:#3b0a11;
   --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
   --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
 }
-*{box-sizing:border-box;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.05rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:var(--body);font-size:1.1rem;line-height:1.6;color:var(--wine);background:var(--blush);-webkit-font-smoothing:antialiased}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--wine);outline-offset:3px;border-radius:6px}
-.wrap{max-width:1080px;margin:0 auto;padding:clamp(16px,4vw,40px)}
-h1,h2,h3{font-family:var(--head);line-height:1.05}
+:focus-visible{outline:3px solid currentColor;outline-offset:4px;border-radius:6px}
+h1,h2,h3{font-family:var(--head);line-height:1;letter-spacing:-.035em}
+
+header.top{position:fixed;inset:0 0 auto;z-index:10;display:flex;justify-content:flex-end;align-items:center;padding:20px clamp(20px,5vw,64px);mix-blend-mode:normal}
+header.top a{text-decoration:none;font-weight:600}
+header.top .mark{font-family:var(--head);font-weight:800;font-size:1.2rem;background:var(--paper);color:var(--wine);padding:6px 14px;border-radius:999px}
+header.top .cta{background:var(--paper);color:var(--wine);padding:10px 20px;border-radius:999px;font-size:.95rem}
+
+section{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:120px clamp(20px,5vw,64px) 80px}
+.inner{max-width:1080px;width:100%;margin:0 auto}
+.label{font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:28px;opacity:.85}
 
 /* hero */
-.hero{padding:clamp(40px,10vw,110px) 0 clamp(24px,5vw,48px)}
-.hero h1{font-size:clamp(3.2rem,13vw,9rem);font-weight:800;letter-spacing:-.04em}
-.hero p{max-width:34ch;font-size:clamp(1.15rem,2.5vw,1.5rem);margin-top:20px;font-weight:600}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.btn{display:inline-block;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--wine);transition:transform .15s}
-.btn.solid{background:var(--wine);color:var(--paper)}
+#hero h1{font-size:clamp(3.4rem,14vw,10rem);font-weight:800}
+#hero p{font-size:clamp(1.2rem,2.6vw,1.7rem);max-width:30ch;margin-top:28px;font-weight:600;line-height:1.35}
+#hero .meta{margin-top:16px;font-size:1rem;font-weight:400;opacity:.85}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;border:2px solid currentColor;font-weight:600;text-decoration:none;transition:transform .15s}
 .btn:hover{transform:translateY(-2px)}
+.btn.fill{background:var(--wine);border-color:var(--wine);color:var(--paper)}
 
-/* cards */
-.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
-.card{border-radius:28px;padding:clamp(22px,3.5vw,36px);display:flex;flex-direction:column;gap:12px}
-.card h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;letter-spacing:-.02em}
-.card h3{font-size:1.25rem;font-weight:800}
-.card p{max-width:58ch}
-.orviton{grid-column:span 4;background:var(--wine);color:var(--paper)}
-.orviton a.btn{align-self:flex-start;margin-top:8px;border-color:var(--blush);color:var(--blush)}
-.orviton a.btn:hover{background:var(--blush);color:var(--wine)}
-.vision{grid-column:span 2;background:var(--rust);color:var(--paper)}
-.vision h2{color:var(--paper)}
-.interest{grid-column:span 2;background:var(--sand);color:#4a0c14}
-.interest:nth-of-type(odd){background:var(--paper);color:var(--wine)}
-.note{grid-column:span 6;background:var(--paper);color:var(--wine);flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.note p{font-weight:600}
-.section-title{font-family:var(--head);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin:56px 0 18px;letter-spacing:-.02em}
+/* about */
+#about{background:var(--wine);color:var(--blush)}
 
-/* extra sections */
-.span2{grid-column:span 2}.span3{grid-column:span 3}.span4{grid-column:span 4}.span6{grid-column:span 6}
-.card.wine{background:var(--wine);color:var(--paper)}
-.card.rust{background:var(--rust);color:var(--paper)}
-.card.sand{background:var(--sand);color:#4a0c14}
-.card.paper{background:var(--paper);color:var(--wine)}
-.card.wine a{color:var(--blush)}
-.card a{font-weight:600;margin-top:auto;overflow-wrap:anywhere}
-.timeline ol{list-style:none;padding:0;display:grid;gap:18px;border-left:4px solid var(--rust);padding-left:22px}
-.timeline li{display:flex;flex-direction:column}
-.timeline strong{font-family:var(--head);font-size:1.25rem}
-.topics ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px}
-.topics li{background:var(--paper);color:var(--wine);padding:10px 18px;border-radius:999px;font-weight:600}
-.contact{margin-top:56px}
-.note h2{font-size:clamp(1.8rem,4vw,2.6rem)}
-.note .actions{margin-top:0}
+
+#about h2{font-size:clamp(2.2rem,6vw,4.6rem);font-weight:800;color:var(--paper)}
+.about-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:stretch}
+.about-grid p{max-width:52ch;margin-top:24px;font-size:clamp(1.05rem,1.8vw,1.25rem)}
+.facts{display:flex;align-items:stretch}
+.fact{flex:1;background:var(--blush);color:var(--wine);border-radius:32px;padding:clamp(28px,4vw,44px);min-height:240px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:transform .2s}
+.fact:hover{transform:translateY(-4px)}
+.fact span{font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.fact strong{font-family:var(--head);font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em}
+a.inline{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:3px}
+#mv{background:var(--blush)}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.mv-card{border-radius:32px;padding:clamp(28px,4vw,52px);min-height:320px;display:flex;flex-direction:column;justify-content:space-between;gap:32px}
+.mv-card h3{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800}
+.mv-card p{font-size:clamp(1.1rem,1.8vw,1.3rem);max-width:30ch}
+.mv-card.m{background:var(--wine);color:var(--blush)}
+.mv-card.m h3{color:var(--paper)}
+.mv-card.v{background:var(--paper);color:var(--wine)}
+
+/* building */
+#building{background:var(--sand);color:var(--deep)}
+#building h2{font-size:clamp(2.2rem,6vw,4.6rem);font-weight:800;color:var(--wine);margin-bottom:40px}
+.item{display:grid;grid-template-columns:1fr 2fr auto;gap:12px 32px;align-items:center;padding:28px 0;border-top:2px solid var(--wine)}
+.item:last-child{border-bottom:2px solid var(--wine)}
+.item h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--wine)}
+.tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--wine);color:var(--paper);padding:3px 10px;border-radius:999px;margin-left:10px;vertical-align:middle}
+.item a{font-weight:600;color:var(--wine)}
+
+/* partner */
+#partner{background:var(--rust);color:var(--paper)}
+#partner h2{font-size:clamp(2.4rem,7vw,5.6rem);font-weight:800;max-width:14ch}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px}
+.cols p{font-size:clamp(1.1rem,2vw,1.35rem);max-width:36ch}
+.cols ul{list-style:none;display:grid;gap:12px;font-weight:600;font-size:1.15rem}
+.cols li{padding-bottom:12px;border-bottom:1px solid rgba(255,246,242,.5)}
+#partner .btn.fill{background:var(--paper);color:var(--rust);border-color:var(--paper)}
+
+.mailline{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:24px;font-weight:600}
+.mailline button{font:inherit;font-size:.9rem;cursor:pointer;background:transparent;color:var(--paper);border:2px solid var(--paper);border-radius:999px;padding:4px 16px}
+.mailline button:hover{background:var(--paper);color:var(--rust)}
+.mailline a{text-underline-offset:4px}
+#copied{font-size:.9rem;opacity:.9}
 
 /* footer */
-footer{background:var(--wine);color:var(--blush);margin-top:72px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;padding-block:36px}
-footer strong{font-family:var(--head);font-size:1.4rem;color:var(--paper)}
-footer nav{display:flex;flex-wrap:wrap;gap:10px}
-footer nav a{padding:10px 18px;border:2px solid var(--blush);border-radius:999px;text-decoration:none;font-weight:600}
-footer nav a:hover{background:var(--blush);color:var(--wine)}
-footer small{width:100%;opacity:.8}
+footer{background:var(--wine);color:var(--blush);padding:48px clamp(20px,5vw,64px)}
+footer .inner{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+footer strong{font-family:var(--head);font-size:1.5rem;color:var(--paper)}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+footer nav a{text-decoration:none;font-weight:600}
+footer nav a:hover{text-decoration:underline}
+footer small{width:100%;opacity:.75}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
 
 @media (max-width:760px){
-  .orviton,.vision,.interest,.note,.span2,.span3,.span4{grid-column:span 6}
+  .item{grid-template-columns:1fr}
+  .about-grid,.mv-grid{grid-template-columns:1fr}
+  .mv-card{min-height:240px}
+  .cols{grid-template-columns:1fr}
+  header.top .cta{padding:8px 14px}
 }
-@media (min-width:761px) and (max-width:960px){
-  .interest{grid-column:span 3}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<main class="wrap">
-  <header class="hero">
-    <h1>Sabbir<br>Ahmed</h1>
-    <p>Founder of Orviton. I build products and ideas that make everyday work simpler.</p>
-    <div class="actions">
-      <a class="btn solid" href="https://www.orviton.com/" rel="me noopener">Visit Orviton</a>
-      <a class="btn" href="https://www.linkedin.com/in/sabbirahmed-im/" rel="me noopener">Connect on LinkedIn</a>
+
+<header class="top">
+  <a class="cta" href="#partner">Partner with me</a>
+</header>
+
+<main>
+  <section id="hero">
+    <div class="inner">
+      <h1>Sabbir<br>Ahmed</h1>
+      <p>Founder of <a class="inline" href="https://www.orviton.com/" rel="noopener">Orviton</a>.</p>
+      <div class="row">
+        <a class="btn fill" href="#building">See what I’m building</a>
+        <a class="btn" href="#partner">Become a partner</a>
+      </div>
     </div>
-  </header>
-
-  <section class="grid" aria-label="About">
-    <article class="card orviton">
-      <h2>Orviton</h2>
-      <p>My startup. Orviton is where I turn ideas into real products, with a focus on quality, clear design and practical value for the people who use them.</p>
-      <a class="btn" href="https://www.orviton.com/" rel="noopener">See what we’re building</a>
-    </article>
-    <article class="card vision">
-      <h2>Vision</h2>
-      <p>Build technology from Bangladesh that people around the world are happy to use.</p>
-    </article>
   </section>
 
-  <h2 class="section-title">About me</h2>
-  <section class="grid" aria-label="About Sabbir Ahmed">
-    <article class="card span4 paper">
-      <h3>Hi, I’m Sabbir.</h3>
-      <p>I’m a founder and builder from Bangladesh. I started Orviton to create products that are simple, useful and well made. I like turning rough ideas into working things, and I share what I learn along the way on GitHub, LinkedIn and X.</p>
-      <p>When I’m not building, I’m reading about startups, trying new tools and talking with other people who like making things.</p>
-    </article>
-    <article class="card span2 sand">
-      <h3>Quick facts</h3>
-      <p>Based in Bangladesh<br>Founder at Orviton<br>Open to collaboration<br>Replies fastest on X and LinkedIn</p>
-    </article>
-  </section>
-
-  <h2 class="section-title">What I’m building</h2>
-  <section class="grid" aria-label="Projects">
-    <article class="card span2 wine">
-      <h3>Orviton</h3>
-      <p>My main focus. A startup building products that solve real problems for real users.</p>
-      <a href="https://www.orviton.com/" rel="noopener">orviton.com</a>
-    </article>
-    <article class="card span2 rust">
-      <h3>Open source</h3>
-      <p>Code, experiments and side projects I publish for others to learn from and use.</p>
-      <a href="https://github.com/sabbirahmed-im" rel="me noopener">github.com/sabbirahmed-im</a>
-    </article>
-    <article class="card span2 paper">
-      <h3>Building in public</h3>
-      <p>Progress updates, lessons and honest notes about the startup journey.</p>
-      <a href="https://x.com/sabbirahmed_im" rel="me noopener">@sabbirahmed_im</a>
-    </article>
-  </section>
-
-  <h2 class="section-title">What I care about</h2>
-  <section class="grid" aria-label="Interests">
-    <article class="card interest">
-      <h3>Startups</h3>
-      <p>Starting small, shipping fast and learning from real users.</p>
-    </article>
-    <article class="card interest">
-      <h3>Software</h3>
-      <p>Writing clean code and sharing projects openly on GitHub.</p>
-    </article>
-    <article class="card interest">
-      <h3>Design</h3>
-      <p>Simple interfaces that explain themselves.</p>
-    </article>
-    <article class="card interest">
-      <h3>Learning</h3>
-      <p>Picking up new tools and skills every week.</p>
-    </article>
-    <article class="card interest">
-      <h3>Community</h3>
-      <p>Meeting builders, founders and students who share ideas.</p>
-    </article>
-    <article class="card interest">
-      <h3>Impact</h3>
-      <p>Making products that solve a real problem for real people.</p>
-    </article>
-  </section>
-
-  <h2 class="section-title">How I work</h2>
-  <section class="grid" aria-label="Principles">
-    <article class="card span3 wine">
-      <h3>Start small, ship early</h3>
-      <p>A simple version in people’s hands teaches more than a perfect plan on paper.</p>
-    </article>
-    <article class="card span3 rust">
-      <h3>Listen to users</h3>
-      <p>The best features come from real conversations, not guesses.</p>
-    </article>
-    <article class="card span3 sand">
-      <h3>Keep it simple</h3>
-      <p>If something needs a long explanation, it needs a better design.</p>
-    </article>
-    <article class="card span3 paper">
-      <h3>Be consistent</h3>
-      <p>Small steps every day add up to something big over a year.</p>
-    </article>
-  </section>
-
-  <h2 class="section-title">My journey</h2>
-  <section class="grid" aria-label="Journey">
-    <article class="card span6 paper timeline">
-      <ol>
-        <li><strong>Curious beginnings</strong><span>Started exploring technology, code and how products are made.</span></li>
-        <li><strong>Building and sharing</strong><span>Began publishing projects on GitHub and connecting with builders on LinkedIn and X.</span></li>
-        <li><strong>Founding Orviton</strong><span>Turned the ideas into a startup with a clear mission.</span></li>
-        <li><strong>What’s next</strong><span>Growing Orviton, launching new products and learning in public.</span></li>
-      </ol>
-    </article>
-  </section>
-
-  <h2 class="section-title">Ask me about</h2>
-  <section class="grid" aria-label="Topics">
-    <article class="card span6 sand topics">
-      <ul>
-        <li>Starting a startup in Bangladesh</li>
-        <li>Building a first product</li>
-        <li>Going from idea to launch</li>
-        <li>Learning to code</li>
-        <li>Personal branding for founders</li>
-        <li>Open source on GitHub</li>
-      </ul>
-    </article>
-  </section>
-
-  <section class="grid contact" aria-label="Contact">
-    <article class="card span6 note">
-      <div>
-        <h2>Let’s talk</h2>
-        <p>Have an idea, a project or a question? Send me a message on X or LinkedIn.</p>
+  <section id="about">
+    <div class="inner reveal">
+      <div class="label">01 / About me</div>
+      <div class="about-grid">
+        <div>
+          <h2>Hi, I’m Sabbir.</h2>
+          <p>I’m the founder of Orviton. I build software that solves real business problems, and I believe it should be practical, reliable and easy to use, never complex for the sake of it.</p>
+          <p>Orviton is my independent, bootstrapped software company, built around one idea: simple tools for complex problems.</p>
+        </div>
+        <div class="facts">
+          <a class="fact" href="https://www.orviton.com/" rel="noopener"><span>Founder</span><strong>Orviton →</strong></a>
+        </div>
       </div>
-      <div class="actions">
-        <a class="btn solid" href="https://x.com/sabbirahmed_im" rel="me noopener">Message on X</a>
-        <a class="btn" href="https://www.linkedin.com/in/sabbirahmed-im/" rel="me noopener">Message on LinkedIn</a>
+    </div>
+  </section>
+
+  <section id="mv">
+    <div class="inner reveal">
+      <div class="label">02 / Mission &amp; Vision</div>
+      <div class="mv-grid">
+        <article class="mv-card m">
+          <h3>Mission</h3>
+          <p>Build focused, production-ready tools that help businesses save time, work more efficiently and grow, without the bloat.</p>
+        </article>
+        <article class="mv-card v">
+          <h3>Vision</h3>
+          <p>A future with software that businesses genuinely enjoy using: practical, reliable and built to solve problems that matter.</p>
+        </article>
       </div>
-    </article>
+    </div>
+  </section>
+
+  <section id="building">
+    <div class="inner reveal">
+      <div class="label">03 / Building</div>
+      <h2>What I’m building</h2>
+      <div class="item">
+        <h3>LeadLeap<span class="tag">Live</span></h3>
+        <p>Real-time lead capture and automated recovery. Reaches out to visitors who leave a form unfinished, without changing your website.</p>
+        <a href="https://leadleap.app" rel="noopener">leadleap.app →</a>
+      </div>
+      <div class="item">
+        <h3>ChurnPit<span class="tag">Waitlist</span></h3>
+        <p>AI churn detection with no dashboard. Reports and high-risk customers arrive straight in your inbox.</p>
+        <a href="https://churnpit.orviton.com" rel="noopener">Join waitlist →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="partner">
+    <div class="inner reveal">
+      <div class="label">04 / Partnership</div>
+      <h2>Let’s sell SaaS together.</h2>
+      <div class="cols">
+        <div>
+          <p>I’m looking for sales partners to bring LeadLeap and future Orviton products to more businesses.</p>
+          <div class="row">
+            <a class="btn fill" href="https://mail.google.com/mail/?view=cm&fs=1&to=sabbir@orviton.com&su=Partnership%20with%20Orviton" target="_blank" rel="noopener">Email me</a>
+            <a class="btn" href="https://www.linkedin.com/in/sabbirahmed-im/" rel="me noopener">LinkedIn</a>
+          </div>
+          <div class="mailline">
+            <span id="mail">sabbir@orviton.com</span>
+            <button type="button" id="copy">Copy</button>
+            <span id="copied" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+        <ul aria-label="Ideal partners">
+          <li>Agencies and web developers</li>
+          <li>Freelancers and consultants</li>
+          <li>SaaS sales professionals</li>
+          <li>Communities with small business audiences</li>
+        </ul>
+      </div>
+    </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="inner">
     <strong>Sabbir Ahmed</strong>
     <nav aria-label="Social links">
       <a href="https://github.com/sabbirahmed-im" rel="me noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/sabbirahmed-im/" rel="me noopener">LinkedIn</a>
       <a href="https://x.com/sabbirahmed_im" rel="me noopener">X</a>
-      <a href="https://www.orviton.com/" rel="me noopener">Orviton</a>
+      <a href="https://www.reddit.com/user/sabbirahmed-im/" rel="me noopener">Reddit</a>
+      <a href="https://www.orviton.com/" rel="noopener">Orviton</a>
     </nav>
-    <small>© 2026 Sabbir Ahmed. All rights reserved.</small>
+    <small>© 2027 Sabbir Ahmed</small>
   </div>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('copy'),m=document.getElementById('mail'),c=document.getElementById('copied');
+  if(b){b.addEventListener('click',function(){
+    var t=m.textContent.trim();
+    function ok(){c.textContent='Copied';setTimeout(function(){c.textContent=''},2000)}
+    function fb(){var r=document.createRange();r.selectNodeContents(m);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand('copy');ok()}catch(e){c.textContent='Press Ctrl+C to copy'}}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,fb)}else{fb()}
+  })}
+})();
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.2});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>

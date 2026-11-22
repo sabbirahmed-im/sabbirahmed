@@ -127,15 +127,24 @@ footer small{width:100%;opacity:.75}
 /* popup */
 .pop{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(59,10,17,.6);backdrop-filter:blur(4px)}
 .pop.show{display:flex;animation:fade .3s both}
-.pop-card{position:relative;width:100%;max-width:440px;background:var(--paper);color:var(--wine);border-radius:28px;padding:44px 32px 32px;box-shadow:0 24px 80px rgba(59,10,17,.45);animation:rise .4s .05s both}
-.pop-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:2px solid var(--wine);background:transparent;color:var(--wine);font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s,color .15s}
-.pop-x:hover{background:var(--wine);color:var(--paper)}
-.pop-tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--rust);color:var(--paper);padding:4px 12px;border-radius:999px}
-.pop-card h2{font-size:clamp(1.8rem,5vw,2.3rem);font-weight:800;margin:16px 0 12px}
-.pop-card p{margin-bottom:24px;font-size:1.05rem}
+.pop-wrap{width:100%;max-width:420px;filter:drop-shadow(0 24px 36px rgba(59,10,17,.45));animation:rise .4s .05s both}
+.pop-card{--cut:176px;position:relative;background:var(--paper);color:var(--wine);border-radius:24px;overflow:hidden;-webkit-mask:radial-gradient(circle at 0 var(--cut),#0000 14px,#000 15px) left/51% 100% no-repeat,radial-gradient(circle at 100% var(--cut),#0000 14px,#000 15px) right/51% 100% no-repeat;mask:radial-gradient(circle at 0 var(--cut),#0000 14px,#000 15px) left/51% 100% no-repeat,radial-gradient(circle at 100% var(--cut),#0000 14px,#000 15px) right/51% 100% no-repeat;}
+.pop-top{height:var(--cut);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0 16px;text-align:center;background:var(--rust);color:var(--paper);border-bottom:3px dashed rgba(255,246,242,.7)}
+.pop-tag{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.pop-big{font-family:var(--head);font-size:4rem;font-weight:800;letter-spacing:-.04em;line-height:1}
+.pop-big small{font-size:1.6rem;letter-spacing:0;margin-left:8px}
+.pop-life{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:var(--paper);color:var(--rust);padding:4px 14px;border-radius:999px}
+.pop-body{padding:28px 28px 24px;text-align:center}
+.pop-body h2{font-size:1.6rem;font-weight:800;margin-bottom:12px;line-height:1.1}
+.pop-body p{font-size:1rem;margin-bottom:22px}
+.pop-body .CTA{display:block;background:var(--wine);color:var(--paper);font-weight:600;padding:15px 18px;border-radius:999px;text-decoration:none;transition:transform .15s}
+.pop-body .CTA:hover{transform:translateY(-2px)}
+.pop-fine{display:block;margin-top:14px;font-size:.8rem;opacity:.8}
+.pop-x{position:absolute;top:12px;right:12px;z-index:2;width:38px;height:38px;border-radius:50%;border:2px solid var(--paper);background:transparent;color:var(--paper);font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s,color .15s}
+.pop-x:hover{background:var(--paper);color:var(--rust)}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.pop.show,.pop-card{animation:none}}
+@media (prefers-reduced-motion:reduce){.pop.show,.pop-wrap{animation:none}}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
@@ -280,12 +289,21 @@ footer small{width:100%;opacity:.75}
 })();
 </script>
 <div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="pop-title" hidden>
-  <div class="pop-card">
-    <button type="button" class="pop-x" id="pop-close" aria-label="Close">&times;</button>
-    <span class="pop-tag">Waitlist open</span>
-    <h2 id="pop-title">Find out which customers may leave.</h2>
-    <p>Join the ChurnPit waitlist and get a report by email with the customers most at risk of leaving, so you can act early.</p>
-    <a class="btn fill" href="https://churnpit.orviton.com" target="_blank" rel="noopener" id="pop-cta">Join the waitlist →</a>
+  <div class="pop-wrap">
+    <div class="pop-card">
+      <button type="button" class="pop-x" id="pop-close" aria-label="Close">&times;</button>
+      <div class="pop-top">
+        <span class="pop-tag">Founding member offer</span>
+        <div class="pop-big">50%<small>OFF</small></div>
+        <span class="pop-life">Lifetime</span>
+      </div>
+      <div class="pop-body">
+        <h2 id="pop-title">Be one of the first. Keep 50% off, for life.</h2>
+        <p>Join the ChurnPit waitlist today and your 50% discount stays with you for as long as you stay with us. It’s our thank-you for believing in us before anyone else.</p>
+        <a href="https://churnpit.orviton.com" target="_blank" rel="noopener" class="CTA" id="pop-cta">Claim my lifetime 50% off →</a>
+        <small class="pop-fine">Valid for as long as your subscription is active.</small>
+      </div>
+    </div>
   </div>
 </div>
 

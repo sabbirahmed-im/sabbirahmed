@@ -124,6 +124,19 @@ footer nav a{text-decoration:none;font-weight:600}
 footer nav a:hover{text-decoration:underline}
 footer small{width:100%;opacity:.75}
 
+/* popup */
+.pop{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(59,10,17,.6);backdrop-filter:blur(4px)}
+.pop.show{display:flex;animation:fade .3s both}
+.pop-card{position:relative;width:100%;max-width:440px;background:var(--paper);color:var(--wine);border-radius:28px;padding:44px 32px 32px;box-shadow:0 24px 80px rgba(59,10,17,.45);animation:rise .4s .05s both}
+.pop-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:2px solid var(--wine);background:transparent;color:var(--wine);font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s,color .15s}
+.pop-x:hover{background:var(--wine);color:var(--paper)}
+.pop-tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--rust);color:var(--paper);padding:4px 12px;border-radius:999px}
+.pop-card h2{font-size:clamp(1.8rem,5vw,2.3rem);font-weight:800;margin:16px 0 12px}
+.pop-card p{margin-bottom:24px;font-size:1.05rem}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.pop.show,.pop-card{animation:none}}
+
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 
@@ -213,7 +226,7 @@ footer small{width:100%;opacity:.75}
       <h2>Let’s sell SaaS together.</h2>
       <div class="cols">
         <div>
-          <p>I’m looking for sales partners to bring ChurnPit and future Orviton products to more businesses.</p>
+          <p>Join the ChurnPit waitlist and get a report by email with the customers most at risk of leaving, so you can act early.</p>
           <div class="row">
             <a class="btn fill" href="https://mail.google.com/mail/?view=cm&fs=1&to=sabbir@orviton.com&su=Partnership%20with%20Orviton" target="_blank" rel="noopener">Email me</a>
             <a class="btn" href="https://www.linkedin.com/in/sabbirahmed-im/" rel="me noopener">LinkedIn</a>
@@ -264,6 +277,37 @@ footer small{width:100%;opacity:.75}
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.2});
   els.forEach(function(e){io.observe(e)});
+})();
+</script>
+<div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="pop-title" hidden>
+  <div class="pop-card">
+    <button type="button" class="pop-x" id="pop-close" aria-label="Close">&times;</button>
+    <span class="pop-tag">Waitlist open</span>
+    <h2 id="pop-title">Find out which customers may leave.</h2>
+    <p>Join the ChurnPit waitlist and get a report by email with the customers most at risk of leaving, so you can act early.</p>
+    <a class="btn fill" href="https://churnpit.orviton.com" target="_blank" rel="noopener" id="pop-cta">Join the waitlist →</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY='sabbir_popup_seen',DAYS=1,pop=document.getElementById('pop');
+  if(!pop)return;
+  try{var t=+localStorage.getItem(KEY);if(t&&Date.now()-t<DAYS*864e5)return}catch(e){}
+  function close(){
+    pop.classList.remove('show');pop.hidden=true;
+    try{localStorage.setItem(KEY,String(Date.now()))}catch(e){}
+    document.removeEventListener('keydown',esc);
+  }
+  function esc(e){if(e.key==='Escape')close()}
+  setTimeout(function(){
+    pop.hidden=false;pop.classList.add('show');
+    document.getElementById('pop-close').focus();
+    document.addEventListener('keydown',esc);
+  },2000);
+  document.getElementById('pop-close').addEventListener('click',close);
+  document.getElementById('pop-cta').addEventListener('click',close);
+  pop.addEventListener('click',function(e){if(e.target===pop)close()});
 })();
 </script>
 </body>
